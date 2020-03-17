@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		*{ margin:0; padding:0;}
+		div{ width: 100%; height: 300px; background: #efefef; 
+			border: 1px solid black; text-align: center;}
+		
+		@media screen and (max-width: 600px){
+				div{background:blue;}
+			}
+		@media screen and (max-width: 1000px){
+				#d01{display: none;}
+				#d02{top: 50px;}
+			}
+		@media screen and (max-width: 600px){
+				#d02{display: none;}
+			}
+			
+		#d01{background: #efefef; position: relative;}
+		#d02{background: #dedede; position: relative;}
+		#d03{background: #fgfgfg; position: relative;}
+		
+		
+		</style>
+	</head>
+	<body>
+		<div id="d01">
+		첫번째 div 1000이상
+		</div>
+		<div id="d02">
+		두번째 div 800~1000
+		</div>
+		<div id="d03">
+		세번째 div 600이하
+		</div>
+	</body>
+</html>
