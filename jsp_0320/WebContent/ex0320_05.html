@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/custom2.js">
+		</script>
+	</head>
+	<body>
+		<!-- form만들고 action="loginOK.html" 
+		input ->아이디 입력, 패스워드 입력창
+		스크립트에서 체크함수 아이디가 admin인지 패스워드 1234인지  아니면 리턴 
+		다 맞을경우 리턴 form.submit(); -->
+		<h1>아이디,비밀번호 입력</h1>
+		
+		<form action="loginOK.html" name="form" method="get"> 
+		<label>아이디 입력</label><input type="text" name="id"> 
+		<label>패스워드 입력</label><input type="text" name="pw"> 
+		<input type="button" onclick="check()" value="로그인">
+		
+		</form>
+		
+		
+		
+	
+	</body>
+</html>
