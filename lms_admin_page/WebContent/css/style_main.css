@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+*{ margin:0; padding:0; color: #666666; font-family: "돋움";}
+
+header{ width:100%; height: 49px; background-color: #3d3d3d;}
+
+header>a{ display:block; text-decoration: none; color:#fff; font-size: 18px; float: left; margin:14px;
+	font-weight: 600;}
+
+header>a>strong{ font-size: 18px; color:#ed5f00; font-weight: 600;}
+
+#head_setting{ width:300px; height: 30px; float: right;  list-style-type: none;}
+
+#head_setting li{ font-size: 14px; color:#fff; }
+
+#head_setting>li:nth-child(2)>table:nth-child(1):hover{ }
+
+#lang_list_wrap{ border:1px solid black; display: none;}
+
