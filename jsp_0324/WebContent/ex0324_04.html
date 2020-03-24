@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//1~200 (버튼1)3의 배수를 초기화 해서 출력하시오.(버튼2)5의 배수만 합계구하기
+			var lotto=[];
+		
+			function insertNum(){
+				var i=0;
+				for(i=0;i<200;i++){
+					lotto[i]=i+1;//1~100의 숫자가 들어감
+				}
+				printNum();
+				
+			}
+			
+			function printNum(){
+				var i;
+				for(i=0;i<lotto.length;i++){
+					document.write("lotto ["+i+"]"+lotto[i]+"<br>");
+				}
+			}
+			
+			function addNum(){
+				var i;
+				var sum=0;
+				for(i=0;i<lotto.length;i++){
+					if(i%5==0){
+					document.write("lotto ["+i+"]"+lotto[i]+"<br>");
+					sum+=lotto[i];
+					}
+					continue;
+				}
+				document.write("5의 배수의 합 : "+sum+"<br>");
+				document.write("<a href='ex0324_04.html'>돌아가기</a><br>");
+			}
+			
+			function delNum(){
+				var i;
+				for(i=0;i<lotto.length;i++){
+					if(i%3==0){
+						lotto[i]=0;
+					}
+					continue;
+				}
+				printNum();
+				document.write("<a href='ex0324_04.html'>돌아가기</a><br>");
+			}
+			
+			insertNum();
+			
+		</script>
+		
+		<button onclick="addNum()">5의 배수만 합계구하기</button><br>
+		<button onclick="delNum()">3의 배수만 초기화</button>
+	
+	</body>
+</html>

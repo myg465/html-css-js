@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//form-> 이름-국문만 1자리 이상 숫자만1자리,숫자2-2자리,숫자3-3자리,숫자4 4자리이하
+			//유효성 검사 하고 함수로 add하고, 곱하기 하는 형태 
+			//화면에 출력
+			
+			function check(){
+			name_ch=/^[가-힣]{1,}$/;
+			num_ch=/^[0-9]{1,}$/;
+			var a=parseInt(math.num1.value);
+			var b=parseInt(math.num2.value);
+			var c=parseInt(math.num3.value);
+			var d=parseInt(math.num4.value);
+			if(!(name_ch.test(math.name.value))){
+				alert("이름을 1자리 이상  입력하세요.");
+				math.name.value="";
+				math.name.focus();
+				return false;
+			}
+			if(!(num_ch.test(math.num1.value))){
+				alert("숫자를 다시 입력하세요.");
+				math.num1.value="";
+				math.num1.focus();
+				return false;
+			}
+			if(!(num_ch.test(math.num2.value))){
+				alert("숫자를 다시 입력하세요.");
+				math.num2.value="";
+				math.num2.focus();
+				return false;
+			}
+			if(!(num_ch.test(math.num3.value))){
+				alert("숫자를 다시 입력하세요.");
+				math.num3.value="";
+				math.num3.focus();
+				return false;
+			}
+			if(!(num_ch.test(math.num4.value))){
+				alert("숫자를 다시 입력하세요.");
+				math.num4.value="";
+				math.num4.focus();
+				return false;
+			}
+			
+			var total=add(a,b,c,d);
+			var total2=mul(a,b,c,d);
+			
+			document.write("숫자4개 합 : "+total+"<br>");
+			document.write("숫자4개 곱 : "+total2+"<br>");
+			
+			}
+			
+		function add(a,b,c,d){
+			return a+b+c+d;
+		}
+		function mul(a,b,c,d){
+			return a*b*c*d;
+		}
+		
+			
+			
+		
+		</script>
+		
+		<form action="" name="math" method="get">
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name" ><br>
+			<label for="num1">숫자1(1자리만 입력)</label>
+			<input type="text" name="num1" id="num1" maxlength="1"><br>
+			<label for="num2">숫자2(2자리만 입력)</label>
+			<input type="text" name="num2" id="num2" maxlength="2"><br>
+			<label for="num3">숫자1(3자리이하만 입력)</label>
+			<input type="text" name="num3" id="num3" maxlength="3"><br>
+			<label for="num4">숫자1(4자리이하만 입력)</label>
+			<input type="text" name="num4" id="num4" maxlength="4"><br>
+			<input type="button" onclick="check()" value="더하기">
+			<input type="reset"  value="취소"> 	
+		</form>
+		
+		
+	</body>
+</html>
