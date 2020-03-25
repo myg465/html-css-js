@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/custom.js"></script>
+			
+	</head>
+	<body>
+		<script type="text/javascript">
+			var lotto=[];
+			var i=0;
+			function insertNum(){
+				for(i=0;i<45;i++){
+					lotto[i]=i+1;
+				}
+				printNum();
+			}
+			
+			function delNum(){
+				for(i=0;i<lotto.length;i++){
+					lotto[i]=0;
+				}
+				//lotto.length=0;
+				printNum();
+			}
+			
+			function printNum(var a){
+				for(i=0;i<lotto.length;i++){
+					if(lotto[i]%a==0){
+					document.write(lotto[i]+" ");
+					if(i%5==0){
+						if(i==0){
+							continue;
+						}
+						document.write("<br>");
+					}
+					}
+				}
+				document.write("<br>");
+				document.write("배열의 크기 : "+lotto.length+"개<br>");
+				document.write("<a href='ex0325_01.html'>돌아가기</a>");
+			}
+			function threeNum(){
+				for(i=0;i<lotto.length;i++){
+					
+					document.write(lotto[i]+" ")
+					}
+				}
+				document.write("<br>");
+				document.write("<a href='ex0325_01.html'>돌아가기</a>");
+			}
+			
+			function addNum(){
+				var sum=0;
+				for(i=0;i<lotto.length;i++){
+					if(lotto[i]%5==0){
+						sum+=lotto[i];
+					}
+				}
+				document.write("5의 배수만 합계한 결과 값 : "+sum+"<br>");
+				document.write("<a href='ex0325_01.html'>돌아가기</a>");
+				
+			}
+			
+			
+			insertNum();
+			
+		</script>
+		
+		<button onclick="delNum()">데이터 초기화</button>
+		<button onclick="threeNum()">3의 배수만 출력</button>
+		<button onclick="addNum()">5의 배수만 합계</button>
+	
+	</body>
+</html>

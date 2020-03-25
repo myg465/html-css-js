@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//2차원 배열-> 1,3,5,7,9, / 6,7,8,9,10.. 25까지 7*7의 2차원 배열을 만들기
+			function seven_arr(){
+			var arr=[];
+			var i=0;
+			for(i=0;i<7;i++){
+				arr[i]=[14*i+1,14*i+3,14*i+5,14*i+7,14*i+9,14*i+11,14*i+13];
+			}
+			
+			for(i=0;i<arr.length;i++){
+				for(var j=0;j<arr[i].length;j++){
+					document.write(arr[i][j]+" ");
+				}
+				document.write("<br>");
+			}
+			document.write("<a href='ex0325_03.html'>돌아가기</a>");
+			
+			
+				
+			}
+			
+			
+			
+			
+			
+			/*function add(a){
+				var k=[];
+				for(var b=0;b<7;j++){
+					k[b]=(a*b)*2-1;
+				}
+				return k;
+			}
+			
+			
+			var i,j=0;
+			
+			var allNum=[];
+			
+			for(i=0;i<7;i++){
+					allNum[i]=add(i);
+				
+			}
+			for(i=0;i<7;i++){
+				for(j=0;j<7;j++){
+					document.write("배열 값 ["+i+","+j+"] : "+allNum[i][j]+"<br>");
+				}
+				document.write("-------------------------<br>");
+			}*/
+			
+		</script>
+		<button onclick="seven_arr()">7차원 배열 만들기</button>
+	
+	</body>
+</html>

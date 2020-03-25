@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>학번</th>
+				<th>이름</th>
+				<th>국어</th>
+				<th>영어</th>
+				<th>합계</th>
+				<th>평균</th>
+			</tr>
+			<tr>
+				<td id="h1"></td>
+				<td id="h2"></td>
+				<td id="h3"></td>
+				<td id="h4"></td>
+				<td id="h5"></td>
+				<td id="h6"></td>
+			</tr>
+			<tr>
+				<td id="k1"></td>
+				<td id="k2"></td>
+				<td id="k3"></td>
+				<td id="k4"></td>
+				<td id="k5"></td>
+				<td id="k6"></td>
+			</tr>
+			<tr>
+				<td id="y1"></td>
+				<td id="y2"></td>
+				<td id="y3"></td>
+				<td id="y4"></td>
+				<td id="y5"></td>
+				<td id="y6"></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+		//함수 선언 객체-학번 이름 국어 영어 (합계,평균(함수구성))
+		//1 홍길동 100 80 2 강감찬 99,87 3 유관순 100 99
+		//테이블에 넣기
+		
+		function Stu(hakNum,name,kor,eng){
+			this.hakNum=hakNum;
+			this.name=name;
+			this.kor=kor;
+			this.eng=eng;
+			this.sum=kor+eng;
+			this.avg=(kor+eng)/2;
+		}
+		var hong=new Stu(1,"홍길동",100,80);
+		var kang=new Stu(2,"강감찬",99,87);
+		var yu=new Stu(3,"유관순",100,99);
+				
+		document.getElementById("h1").textContent=hong.hakNum;
+		document.getElementById("h2").textContent=hong.name;
+		document.getElementById("h3").textContent=hong.kor;
+		document.getElementById("h4").textContent=hong.eng;
+		document.getElementById("h5").textContent=hong.sum;
+		document.getElementById("h6").textContent=hong.avg;
+		
+		document.getElementById("k1").textContent=kang.hakNum;
+		document.getElementById("k2").textContent=kang.name;
+		document.getElementById("k3").textContent=kang.kor;
+		document.getElementById("k4").textContent=kang.eng;
+		document.getElementById("k5").textContent=kang.sum;
+		document.getElementById("k6").textContent=kang.avg;
+		
+		document.getElementById("y1").textContent=yu.hakNum;
+		document.getElementById("y2").textContent=yu.name;
+		document.getElementById("y3").textContent=yu.kor;
+		document.getElementById("y4").textContent=yu.eng;
+		document.getElementById("y5").textContent=yu.sum;
+		document.getElementById("y6").textContent=yu.avg;
+		</script>
+	
+	</body>
+</html>

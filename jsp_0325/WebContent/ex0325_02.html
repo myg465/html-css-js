@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//k-국문 e-영문 m-수학 c-컴퓨터 // 컴퓨터 학과 학생만 뽑아서 배열을 만들기
+			var stu_num =["k202001","k202002","e202001","e202002","e202003","m202001"
+				,"m202002","c202003","k202005","e02003","c202007"]
+			
+			function comArr(value){
+				if(value.indexOf("c")!=-1){
+					return value;
+				}
+		    }
+			//배열분리 함수 호출
+			function div_arr(){
+			var com_num=stu_num.filter(comArr);
+			document.write("전체 학생 배열 : "+stu_num+"<br>");
+			document.write("컴퓨터 학생 배열 : "+com_num+"<br>");
+			document.write("<a href='ex0325_02.html'>돌아가기</a>");
+			}
+			
+		
+		
+		
+			//function com_major(value){
+			//var ch=/^[c]+$/;
+			//if(!(ch.test(value))){
+				
+			//}
+			//return value;
+			//}
+			//var stu_com=stu_num.filter(com_major);
+			//document.write("전체 학생 학번 : "+stu_num+"<br>");
+			//document.write("컴퓨터 학과 학번 : "+stu_com+"<br>");
+			
+		</script>
+		<button onclick="div_arr()">컴퓨터 학생 분리하기</button>
+	
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var menu=new Array(name:["찹스테이크","육개장"],price:["26,800","16,800"] num:[2,3] );
+	function list(){
+		for(var i=0;i<menu.length;i++){
+			document.getElementById("ul").innerHTML='
+					<li>
+	 					<a href="#">
+		 					<img alt='+menu.name[i]+' src="images/best01.jpg">
+	 					</a>
+	 					<a href="#">
+		 					<span>'+menu.name[i]+'</span>
+		 					<span>
+		 						'+menu.price[i]+'
+		 						<span>/'+menu.num+'인분</span>
+		 					</span>
+	 					</a>
+	 					<a href="#"></a>
+	 				  </li>'
+		}
+		
+		
+		
+		
+		
+	}
+	list();
+	
+</script>
+</head>
+<body>
+			<ul id="ul"></ul>
+
+
+</body>
+</html>
