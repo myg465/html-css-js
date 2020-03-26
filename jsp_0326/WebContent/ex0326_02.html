@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			img{ width:200px; }
+		</style>
+		<script type="text/javascript">
+			function max(){
+				document.getElementById("s01").style.width="600px";
+			}
+			function re(){
+				document.getElementById("s01").style.width="";
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<img id="s01" alt="봄" src="images/s01.jpg">
+		<button  onclick="max()">이미지 확대하기(600px로 확대하기)</button>
+		<button onclick="re()">이미지 원래대로</button>
+	</body>
+</html>
