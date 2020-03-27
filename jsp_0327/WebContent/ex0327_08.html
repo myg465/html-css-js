@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		
+	</head>
+	
+	
+	<!-- 1. 이미지1번은 왼쪽으로 600 이미지를 원형으로
+	2. 이미지 2번은 왼쪽으로 300 30px둥글게 투명도를 90%로 -->
+	<body>
+		<div>
+			<img id="img01" alt="" src="images/img01.jpg"><br>
+			<img id="img02" alt="" src="images/img02.jpg">
+		</div>
+		<button id="btn01" onclick="move1('#img01')">이미지 둥글게1</button>
+		<button id="btn02" onclick="move2('#img02')">이미지 둥글게2</button>
+	</body>											
+</html>

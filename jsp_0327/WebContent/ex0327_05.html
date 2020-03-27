@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<style type="text/css">
+			@charset "UTF-8";
+
+			div{ width:300px; height: 300px;
+				margin:20px; border: 1px solid black;
+				}
+			p{ font-size: 20px; }
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$(window).scroll(function(){
+					var scNum=$(this).scrollTop();
+					$("p").eq(0).text("스크롤 높이 : "+scNum);
+				});
+				
+				$(window).mousemove(function(e){
+					var x=e.pageX;
+					var y=e.pageY;
+					$("p").eq(1).text("x 좌표 : "+x);
+					$("p").eq(2).text("y 좌표 : "+y);
+				});
+				var xWidth=0;
+				var xHeight=0;
+				$("#btn01").click(function(){
+					xWidth=$("div").eq(1).width()-10;
+					$("div").eq(1).width(xWidth);
+					$("#div p").eq(0).text("x넓이:"+xWidth);
+					xHeight=$("div").eq(1).height()-10;
+					$("div").eq(1).height(xHeight);
+					$("#div p").ep(1).text("y넓이:"+xHeight);
+					
+				});
+				
+				
+			});
+		</script>
+	
+	</head>
+	<body>
+		<div>
+			<p>스크롤 높이 : </p>
+			<p>x 좌표 : 0</p>
+			<p>y 좌표 : 0</p>
+		</div>
+		<div id="div">
+			<p>박스 넓이 : 0</p>
+			<p>박스 높이 : 0</p>
+		</div>
+		<button id="btn01">박스 축소</button>
+	</body>
+</html>

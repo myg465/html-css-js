@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+				function move(obj,time){
+					$(obj).stop().animate({
+						"left":"-550px",
+						"top":"0"
+					},time);
+				}
+		
+				function back(css){
+					$(css).stop().animate({
+						"left":"0",
+						"top":"0"
+					});
+				}
+																	
+		</script>
+		<style type="text/css">
+			@charset "UTF-8";
+
+			#init{ width: 200px; height: 30px; font-size: 20px;
+				display: inline-block;}
+				
+			#moving{ border:1px solid black; margin:20px auto 0 auto;
+				text-align: right; width:550px; }
+				
+			#moving img{ cursor: pointer; position: relative; 
+				width:300px;}
+		</style>
+	</head>
+	<body>
+		<div id="init">
+			<button onclick="back('#moving img')">초기화 버튼</button><br>
+		</div>
+		<div id="moving">
+			<img onclick="move(this,6000)" alt="" src="images/img01.jpg"><br>
+			<img onclick="move(this,3000)" alt="" src="images/img02.jpg"><br>
+		</div>
+	</body>
+</html>
