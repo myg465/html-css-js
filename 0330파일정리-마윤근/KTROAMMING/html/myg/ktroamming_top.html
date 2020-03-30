@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="../../css/myg/style_kt_top.css">
+		<script type="text/javascript" src="../../js/myg/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="../../js/myg/prefixfree.dynamic-dom.min.js"></script>
+		<script type="text/javascript" src="../../js/myg/custom_kt_top.js"></script>
+		
+	</head>
+	<body>
+		<section>
+			<div id="content">
+				<form action="" name="agree_form" id="agree_form" method="get">
+					<div id="agree">
+					<h2><span></span>개인정보제공 및 활용 동의</h2>
+					<table>
+						<tr>
+							<th colspan="4" class="table_head"><p class="text_imp"><b></b>[필수]</p>개인정보 수집 이용 동의</th>
+						</tr>
+						<tr>
+							<th>목적</th>
+							<th>항목</th>
+							<th>보유기간</th>
+							<th style="border-right:none">동의여부</th>
+						</tr>
+						<tr>
+							<td>이용자 식별 및 본인여부 확인</td>
+							<td>성, 이름, 서비스이용기간,
+								<br>수령/반납장소, 메모</td>
+							<td>서비스 해지 후 6개월까지</td>
+							<td rowspan="4" class="agree_select">
+								<input type="radio" name="s_agree" value="yes" id="s_agree_yes"><label for="s_agree_yes">동의</label><br>
+								<input type="radio" name="s_agree" value="no" id="s_agree_no"><label for="s_agree_no">비동의</label>
+							</td>
+						</tr>
+						<tr>
+							<td>계약 이행을 위한 연락
+								<br>민원 등 고객 고충 처리</td>
+							<td>연락처(이메일, 연락처)</td>
+							<td>서비스 해지 후 6개월까지</td>
+						</tr>
+						<tr>
+							<td>상품 임대에 대한 결제 및
+								<br>합산청구에 이용</td>
+							<td>카드사명, 카드주의 성명,
+								<br>카드유효기간, 결제정보</td>
+							<td>서비스 해지 후 6개월까지</td>
+						</tr>
+						<tr>
+							<td colspan="3">※ 만 14세 미만 법정대리인 동의가 필요합니다.</td>
+						</tr>
+					</table>
+					<p class="table_tail">※ KT 로밍 서비스 제공을 위해서 필요한 최소한의 개인정보이므로 동의를 해 주셔야 서비스를 이용하실 수 있습니다.</p>
+					<table>
+						<tr>
+							<th colspan="3" class="table_head"><p class="text_imp"><b></b>[필수]</p>개인정보의 처리위탁에 대한 동의</th>
+						</tr>
+						<tr>
+							<th>수탁자</th>
+							<th>목적</th>
+							<th style="border-right:none">동의여부</th>
+						</tr>
+						<tr>
+							<td>KT DS</td>
+							<td>Kt 로밍 인바운드 홈페이지 예약 시스템 유지 및 관리</td>
+							<td rowspan="4"  class="agree_select">
+								<input type="radio" name="c_agree" value="yes" id="c_agree_yes"><label for="c_agree_yes">동의</label><br>
+								<input type="radio" name="c_agree" value="no" id="c_agree_no"><label for="c_agree_no">비동의</label>
+							
+							</td>
+						</tr>
+						<tr>
+							<td>KT IS/KT CS</td>
+							<td>렌탈 관리 및 로밍 고객센터 운영</td>
+						</tr>
+						<tr>
+							<td>넥스브레인</td>
+							<td>kt 로밍 인바운드 홈페이지 운영 및 관리</td>
+						</tr>
+						<tr>
+							<td>(주)케이알파트너스</td>
+							<td>신용카드 결제 및 온라인 결제대행</td>
+						</tr>
+						</table>
+						<p class="table_tail">※ KT 로밍 서비스 제공을 위해서 필요한 최소한의 개인정보이므로 동의를 해 주셔야 서비스를 이용하실 수 있습니다.</p>
+						<span id="all_agree_wrap">
+						<input type="checkbox" name="all_agree" id="all_agree">
+						<label for="all_agree">KT 로밍 서비스 이용을 위한 필수 약관에 대해 모두 동의합니다.</label>
+						</span>
+					</div>
+				</form>
+				<h2><span></span>개인정보 입력</h2>
+				<div id="info_input">
+					<div>
+						<form action="" name="info_input" id="info_input_form" method="get">
+							<ul id="form_list">
+								<li>
+									<fieldset>
+										<label for="sup_name"><b></b>Surname (성)</label>
+										<input type="text" id="sup_name" name="sup_name">
+										<label for="sub_name"><b></b>Given name (이름)</label>
+										<input type="text" id="sub_name" name="sub_name">
+									<p class="text_red">※ 이름은 여권 기준으로 영문 대문자로 여권 등록된 이름과 동일하게 작성해 주셔야 합니다.</p>
+									</fieldset>
+								</li>
+								<li>
+									<fieldset>
+										<label for="email_head"><b></b>이메일</label>
+										<input type="text" id="email_head" name="email_head">
+										<span>@</span>
+										<input type="text" id="email_tail" name="email_tail">
+										<select name="email_type" id="email_type">
+											<option value="">직접입력</option>
+											<option value="naver.com">naver.com</option>
+											<option value="gmail.com">gmail.com</option>
+											<option value="qq.com">qq.com</option>
+											<option value="163.com">163.com</option>
+											<option value="yahoo.com">yahoo.com</option>
+											<option value="yahoo.co.jp">yahoo.co.jp</option>
+										</select>
+										<br><br>
+										<label for="tel"><b></b>연락처</label>
+										<input type="text" name="tel" id="tel">
+										<p class="text_red">※ 연락처는 '–' 없이 숫자로 입력해 주셔야 합니다.</p>
+									</fieldset>
+								</li>
+							</ul>
+						</form>
+					
+					</div>
+				</div>
+				
+				<div id="res_info">
+				<h2><span></span>예약정보 입력</h2>
+					<div>
+						<p>Prepaid Data SIM만 예약 하실 경우
+						<br>SIM 카드 자판기를 통해 수령이 가능합니다.</p><br>
+						<span>단, Prepaid Data SIM을 포함한 복수 상품 예약 시 카운터를 방문해 주셔야 합니다.</span>
+					</div>
+					<div>
+						<p>SIM 카드 자판기 이용 가능 장소</p><br>
+						<span>- 인천공항 Terminal1, 인천항만 -</span><br>
+						<p class="text_yellow">인천항만 자판기에서 Prepaid Data SIM 구매 시 50% 할인 혜택을 받으실 수 있습니다.
+						단, <br>현장 구매 고객 한정 할인이 적용됩니다.</p>
+					</div>
+					<button id="submit">제출</button>
+				</div>
+			</div>
+		</section>
+	
+	</body>
+</html>
