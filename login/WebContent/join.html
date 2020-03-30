@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function open_idcheck(){
+				window.open("l_pop.html","id_check",
+				"width=600px,height=400px,resizable=no,scrollbars=no");
+			};
+		
+		</script>
+	</head>
+	<body>
+		<h1>회원가입</h1>
+		<form action="join_com.jsp" name="join" method="get">
+			<label for="j_id">아이디 : </label>
+			<input type="text" name="j_id" id="j_id" required="required" readonly="readonly">
+			<input type="button" onclick="open_idcheck()" value="아이디 중복체크"><br>
+			<label for="j_name">이름 : </label>
+			<input type="text" name="j_name" id="j_name" required><br>
+			<input type="submit" value="전송">
+		</form>	
+	</body>
+</html>
