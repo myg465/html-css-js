@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="../../css/kwh/admin_account.css">
+<link rel="stylesheet" type="text/css"
+	href="../../css/myg/style_stu_input.css">
+<script type="text/javascript" src="../../js/myg/custom_input.js"></script>
+<script type="text/javascript" src="../../js/myg/jquery-3.4.1.min.js"></script>
+<script type="text/javascript"
+	src="../../js/myg/prefixfree.dynamic-dom.min.js"></script>
+
+</head>
+<body>
+	<header>
+		<div id="header_left">
+			LMS <span>ENTERPRISE</span> Type
+		</div>
+		<div id="header_right">
+			<span class="header_info">관리자 (GMT+9:00) Seoul</span> <img
+				src="http://lmsenterprise2019.itmap.co.kr/_admin/image/logout.png"
+				alt="">
+
+			<table id="lang_list">
+				<tr>
+					<td class="table_head"><a href="#"> <img
+							src="http://lmsenterprise2019.itmap.co.kr/_admin/image/KOR.png"
+							alt=""> 한국어
+					</a></td>
+					<td class="table_end"><a href="#" class="pointer"> <span
+							class="pointer_span">▼</span>
+					</a></td>
+				</tr>
+			</table>
+
+			<table id="manual">
+				<tr>
+					<td class="table_head"><a href="#"> LMS 매뉴얼 </a></td>
+					<td class="table_end"><a href="#" class="pointer"> <span
+							class="pointer_span">▼</span>
+					</a></td>
+				</tr>
+			</table>
+		</div>
+	</header>
+
+	<nav>
+		<ul>
+			<li class="nav_list"><span class="nav1">&emsp;</span><a href="#">
+					회원관리</a></li>
+			<li class="nav_list"><span class="nav2">&emsp;</span><a href="#">
+					상품관리</a></li>
+			<li class="nav_list"><span class="nav3">&emsp;</span><a href="#">
+					공지사항</a></li>
+			<li class="nav_list"><span class="nav4">&emsp;</span><a href="#">
+					이벤트</a></li>
+		</ul>
+	</nav>
+
+	<section>
+
+
+		<form action="" name="info_form" id="info_form">
+			<div id="stu_input_wrap">
+				<p>
+					학생 등록 <a href="#"><img alt="목록" src="../../img/myg/list.png"></a>
+					<a href="#"><img alt="즐찾" src="../../img/myg/favorite.png"></a>
+				</p>
+				<span> <img alt="아이콘" src="../../img/myg/bg_span.png">
+					고정 항목
+				</span>
+				<table>
+					<tr>
+						<th>상태</th>
+						<td colspan="3"><select name="stu_state">
+								<option value="1">가입</option>
+								<option value="2">탈퇴</option>
+						</select></td>
+					</tr>
+					<tr>
+						<th>등급</th>
+						<td colspan="3"><select name="stu_grade">
+								<option value="1">등급 없음</option>
+								<option value="2">새싹회원</option>
+								<option value="3">잎새회원</option>
+								<option value="4">나무회원</option>
+								<option value="5">숲회원</option>
+						</select></td>
+					</tr>
+					<tr>
+						<th>가입경로</th>
+						<td colspan="3"><input type="radio" name="join_path"
+							value="1"><img alt="경로1"
+							src="../../img/myg/join_path1.png"> <input type="radio"
+							name="join_path" value="2"><img alt="경로2"
+							src="../../img/myg/join_path2.png"> <input type="radio"
+							name="join_path" value="3"><img alt="경로3"
+							src="../../img/myg/join_path3.png"></td>
+					</tr>
+					<tr>
+						<th>아이디</th>
+						<td colspan="3"><input type="text" name="stu_id"> <a
+							class="dople" href="#"><img alt="체크"
+								src="../../img/myg/icon_dopel.png">중복확인</a> <span><img
+								alt="알림" src="../../img/myg/icon_exclamation.png">영문 또는
+								숫자 조합(5~15자리)</span></td>
+					</tr>
+					<tr>
+						<th>비밀번호</th>
+						<td colspan="3"><input type="text" name="stu_pw"> <span><img
+								alt="알림" src="../../img/myg/icon_exclamation.png">5~16자리,
+								영문+숫자+특수문자(~!@\#$%<>^&*)</span></td>
+					</tr>
+					<tr>
+						<th>비밀번호 확인</th>
+						<td colspan="3"><input type="text" name="stu_pw_check">
+						</td>
+					</tr>
+					<tr>
+						<th>닉네임</th>
+						<td colspan="3"><input type="text" name="stu_nickName">
+							<a class="dople" href="#"><img alt="체크"
+								src="../../img/myg/icon_dopel.png">중복확인</a> <span><img
+								alt="알림" src="../../img/myg/icon_exclamation.png">영문 또는
+								숫자 조합(5~15자리)</span></td>
+					</tr>
+					<tr>
+						<th>이름(한글)</th>
+						<td class="mini"><input type="text" name="stu_krName">
+						</td>
+						<th>이름(영문)</th>
+						<td class="mini"><input type="text" name="stu_engName">
+						</td>
+					</tr>
+					<tr>
+						<th>성별</th>
+						<td class="mini"><input type="radio" name="sex" value="1">남
+							<input type="radio" name="sex" value="2">여</td>
+						<th>생년월일</th>
+						<td class="mini"><input type="date" name="birth"></td>
+					</tr>
+					<tr>
+						<th>휴대폰번호</th>
+						<td colspan="3"><select name="stu_tel_top" class="info_selec">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+								<option value="070">070</option>
+						</select> - <input type="text" maxlength="4" name="stu_tel_middle">
+							- <input type="text" maxlength="4" name="stu_tel_last"> <input
+							type="checkbox" name="sms_submit" value="1"> <label
+							for="sms_submit">문자수신 동의</label></td>
+					</tr>
+					<tr>
+						<th>비밀번호 힌트</th>
+						<td colspan="3"><select name="stu_pw_hint" class="info_selec">
+								<option value="1">선택</option>
+								<option value="2">자신의 인생 좌우명은?</option>
+								<option value="3">초등학교 때 기억에 남는 짝꿍 이름은?</option>
+								<option value="4">유년시절 가장 생각나는 친구 이름은?</option>
+								<option value="5">가장 기억에 남는 선생님 성함은?</option>
+								<option value="6">친구들에게 공개하지 않은 어릴 적 별명이 있다면?</option>
+								<option value="7">추억하고 싶은 날짜가 있다면?(예:1994/04/20)</option>
+								<option value="8">다시 태어나면 되고 싶은 것은?</option>
+								<option value="9">가장 감명깊게 본 영화는?</option>
+								<option value="10">읽은 책 중에서 좋아하는 구절이 있다면?</option>
+								<option value="11">기억에 남는 추억의 장소는?</option>
+						</select> <input type="text" name="stu_pw_hint_ans"></td>
+					</tr>
+				</table>
+				<div id="submit">
+					<button type="button" onclick="#">
+						<img alt="" src="">리스트
+					</button>
+					<button type="button" onclick="#">
+						<img alt="" src="">저장하기
+					</button>
+				</div>
+			</div>
+
+		</form>
+
+	</section>
+
+	<footer> </footer>
+</body>
+</html>
